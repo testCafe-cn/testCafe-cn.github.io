@@ -1,1 +1,15 @@
-theme: jekyll-theme-cayman
+# Site settings
+title: "TestCafe中文网站"
+baseurl: "/" 
+url: "http://www.testcafe.org.cn" 
+  
+# Build settings
+markdown: redcarpet
+highlighter: null
+redcarpet:
+  extensions: ["tables"]
+plugins:
+  - jekyll-sitemap
+
+# Blog
+excerpt_separator: "<!--more-->"

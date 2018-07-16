@@ -1,0 +1,44 @@
+---
+---
+@charset "utf-8";
+
+$base-font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', Roboto, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+$base-font-size:   14px;
+$base-font-weight: normal;
+$base-line-height: 1.5;
+$small-font-size:  $base-font-size * 0.875;
+
+$spacing-unit:     40px;
+
+$text-color:               #111;
+$background-color:         #ffffff;
+$landing-background-color: #a4cada;
+$brand-color:              #2fa4cf;
+
+$grey-color:       #828282;
+$grey-color-dark:  darken($grey-color, 25%);
+
+$blockquote-border-color: #e8e8e8;
+$border-color:            #e6e6e6;
+
+$doc-nav-width:      350px;
+
+$baseUrl:            "/testcafe";
+
+$header-height:     75px;
+$doc-header-height: 126px;
+$footer-height:     113px;
+
+$body-min-width: 1230px;
+$max-width:      1500px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@import
+        "base",
+        "layout"
+;

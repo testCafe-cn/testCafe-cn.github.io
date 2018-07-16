@@ -1,0 +1,686 @@
+---
+---
+
+$body-min-width: 1230px;
+$max-width: 1500px;
+
+.site-header, body, html {
+    min-width: $body-min-width;
+}
+
+.veil-on {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .player {
+        position: fixed;
+        overflow: visible;
+        left: 50%;
+        top: 50%;
+        margin: -240px 0 0 -426px;
+    }
+}
+
+.veil-off {
+    display: none;
+}
+
+.banner {
+    padding: 96px 100px 51px;
+    background: #a4cada;
+    
+    @media (max-width: 1270px) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .banner-content {
+        max-width: $max-width;
+        margin: auto;
+
+        .title {
+            font-weight: bold;
+            font-size: 65px;
+            line-height: 72px;
+            color: #ffffff;
+
+            @media (max-width: 1500px) and (min-width: 1270px) {
+                font-size: 50px;
+                line-height: 55px;
+                padding-top: 20px;
+            }
+
+            @media (max-width: 1270px) {
+                font-size: 55px;
+                line-height: 60px;
+            }
+        }
+
+        .slogan {
+            font-weight: bold;
+            font-size: 30px;
+            color: #404142;
+            padding-top: 17px;
+
+            @media (max-width: 1500px) and (min-width: 1270px) {
+                font-size: 24px;
+            }
+            
+            @media (max-width: 1270px) {
+                font-size: 26px;
+            }
+        }
+
+        .get-started-button {
+            width: 423px;
+            height: 70px;
+            color: #ffffff;
+            background-color: #404142;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 25px;
+            line-height: 65px;
+            text-align: center;
+            margin-top: 30px;
+            display: inline-block;
+
+            &:hover {
+                color: #404142;
+                background: #ffffff;
+            }
+        }
+
+        .banner-text {
+            float: left;
+            margin: -27px 30px 0 0;
+        }
+
+        .banner-image {
+            float: right;
+
+            @media (max-width: 1270px) {
+                display: none;
+            }
+        }
+    }
+}
+
+.values {
+    padding-top: 100px;
+    display: table;
+    width: 100%;
+
+    .value {
+        font-size: 24px;
+        color: #ffffff;
+        padding-left: 76px;
+        line-height: 1.2;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: 0 7px;
+    }
+    
+    .value-container {
+        border-top: 1px solid #c8dfe8;
+        border-right: 1px solid #c8dfe8;
+        width: 33%;
+        vertical-align: top;
+        box-sizing: border-box;
+        display: table-cell;
+        padding: 39px 41px 17px 47px;
+
+        &:last-child {
+            padding-right: 0;
+            border-right: none;
+        }
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    .value-1 {
+        background-image: url("/testcafe/images/landing-page/all-environments.png");
+    }
+    .value-2 {
+        background-image: url("/testcafe/images/landing-page/quick-setup.png");
+    }
+    .value-3 {
+        background-image: url("/testcafe/images/landing-page/free-open-source.png");
+    }
+
+    .description {
+        line-height: 1.5;
+        color: #404142;
+        font-size: 14px;
+        margin-top: -10px;
+
+        & > p {
+            margin-bottom: 14px;
+        }
+
+        a {
+            color:#404142;
+            text-decoration: underline;
+        }
+    }
+}
+
+.how-it-works-section {
+    padding: 0 100px;
+    min-width: calc(#{$body-min-width} - 140px);
+    height: 827px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.how-it-works-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.how-it-works-section .how-it-works-content {
+    max-width: 1600px;
+    position: relative;
+    margin-left: -100px;
+    padding-left: 100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.how-it-works-section .how-it-works-content:before, .how-it-works-section .how-it-works-content:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+.how-it-works-section .how-it-works-content h1 {
+    color:#404142;
+    font-weight: bold;
+    font-size: 45px;
+    margin: 40px 0;
+}
+
+.how-it-works-section .how-it-works-content:before {
+    left: 18px;
+    background-color: transparent;
+    width: 30px;
+    background: -webkit-linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1)); 
+    background: -o-linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1)); 
+    background: -moz-linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1)); 
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1));
+}
+
+.how-it-works-section .how-it-works-content .gallery-wrapper {
+    margin-left: -81px;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 1270px) {
+    .how-it-works-section {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .how-it-works-section .how-it-works-content:before {
+        left: 24px;
+    }
+}
+
+code {
+    background-color: #98c0d1;
+    color:#ffffff;
+    border: 1px solid #c8dfe8;
+    border-radius: 0;
+    padding: 7px 15px;
+    margin-bottom: -15px;
+}
+
+.features-section {
+    background: #a4cada;
+    padding: 42px 100px 74px;
+
+    @media (max-width: 1270px) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    .features-content {
+        max-width: $max-width;
+        margin: auto;
+
+        .features-header {
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 45px;
+        }
+        
+        .features-subheader {
+            color: #404142;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .features {
+            display: table;
+            padding-top: 50px;
+        
+            .row-1 {
+                .feature-container {
+                    border-bottom: 1px solid #c8dfe8;
+                    border-right: 1px solid #c8dfe8;
+                    padding: 11px 41px 21px 47px;
+        
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        
+            .row-2 {
+                .feature-container {
+                    border-right: 1px solid #c8dfe8;
+                    border-bottom: 1px solid #c8dfe8;
+                    padding: 28px 41px 20px 47px;
+        
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        
+            .row {
+                display: table-row;
+        
+                .feature-container {
+                    display: table-cell;
+                    width: 33%;
+                    vertical-align: top;
+                    box-sizing: border-box;
+                                
+                    &:last-child {
+                        padding-right: 0;
+                        border-right: none;
+                    }
+        
+                    &:first-child {
+                        padding-left: 0;
+                    }
+        
+                    .feature {
+                        font-size: 24px;
+                        color: #ffffff;
+                        background-repeat: no-repeat;
+                        background-color: transparent;
+                        padding-top: 59px;
+                        
+                        .description {
+                            line-height: 1.5;
+                            color: #404142;
+                            font-size: 14px;
+                            margin-top: -9px;
+        
+                            a {
+                                color:#404142;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+        
+                    .feature-1 {
+                        background-image: url("/testcafe/images/landing-page/stable-tests.png");
+                    }
+                    .feature-2 {
+                        background-image: url("/testcafe/images/landing-page/js-ts.png");
+                    }
+                    .feature-3 {
+                        background-image: url("/testcafe/images/landing-page/detect-errors.png");
+                    }
+                    .feature-4 {
+                        background-image: url("/testcafe/images/landing-page/concurrent-tests.png");
+                    }
+                    .feature-5 {
+                        background-image: url("/testcafe/images/landing-page/page-object.png");
+                    }
+                    .feature-6 {
+                        background-image: url("/testcafe/images/landing-page/continuous-integration.png");
+                    }
+                }
+        
+                #page-object-popover {
+                    display: none;
+                }
+        
+                #page-object-link {
+                    cursor: pointer;
+                    border-bottom: 1px dashed #404142;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .testcafe-live-promo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+
+            .promo-block {
+                display: flex;
+                justify-content: space-between;
+
+                .image {
+                    background-image: url("/testcafe/images/landing-page/rapid-dev-icon.svg");
+                    background-repeat: no-repeat;
+                    background-position-y: 9px;
+                    width: 83px;
+                    min-width: 83px;
+                    height: 84px;
+                    display: inline-block;
+                    vertical-align: top;
+                }
+                .description {
+                    display: inline-block;
+                    max-width: 400px;
+                    margin-left: 35px;
+
+                    .header {
+                        font-size: 24px;
+                        color: #ffffff;
+                    }
+                    .text {
+                        font-size: 14px;
+                        color: rgba(64, 65, 66, 255);
+                        margin-top: 9px;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                
+                .video-button {
+                    @media (max-width: 1480px) {
+                        width: 286px;
+                    }
+                    width: 326px;
+                    height: 61px;
+                    text-align: center;
+                    padding-left: 10px;
+                    line-height: 63px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #404142;
+                    background-image: url('/testcafe/images/landing-page/rapid-dev-play-video.svg');
+                    background-repeat: no-repeat;
+                    background-position: 15px 15px;
+                    background-color: #ffffff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-left: 40px;
+
+                    &:hover {
+                        text-decoration: none;
+                        color: #ffffff;
+                        background-color: #404142;
+                    }
+                }
+                .repo-button {
+                    @media (max-width: 1480px) {
+                        width: 280px;
+                    }
+                    width: 320px;
+                    height: 61px;
+                    text-align: center;
+                    padding-left: 10px;
+                    line-height: 56px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #404142;
+                    background-image: url('/testcafe/images/landing-page/rapid-dev-github-icon.svg');
+                    background-repeat: no-repeat;
+                    background-position: 15px 13px;
+                    border: 2px solid #ffffff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-left: 40px;
+                    box-sizing: border-box;
+
+                    &:hover {
+                        text-decoration: none;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.testcafe-studio-promo-gradient {
+    background: linear-gradient(#2ca8d4, #36b6e4);
+    height: 45px;
+}
+
+.testcafe-studio-promo {
+    background: #36b6e4;
+    min-height: 255px;
+    
+    .testcafe-studio-promo-content {
+        max-width: 1500px;
+        min-height: 255px;
+        margin: 0 auto;
+        padding: 10px 100px 0;
+        display: flex;
+        justify-content: space-between;
+
+        .testcafe-studio-promo-description {
+            margin: 23px 20px 0 0;
+
+            .testcafe-studio-promo-header {
+                font-weight: bold;
+                font-size: 30px;
+                color: rgba(10, 62, 81, 255);
+            }
+            .testcafe-studio-promo-subheader {
+                font-size: 14px;
+                color: #fff;
+                margin-top: 5px;
+            }
+            .check-it-out-button {
+                width: 240px;
+                height: 60px;
+                margin-top: 27px;
+                display: block;
+                background-color: #006a90;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 60px;
+                margin-bottom: 40px;
+                
+                &:hover {
+                    text-decoration: none;
+                    background-color: #ffffff;
+                    color: rgba(10, 62, 81, 255);
+                }
+            }
+        }
+
+        .testcafe-studio-promo-screenshot {
+            background: url('/testcafe/images/landing-page/studio-promo.png') no-repeat 0 0;
+            width: 732px;
+            min-width: 732px;
+            height: 240px;
+            margin: 15px -16px 0 0;
+            align-self: flex-end;
+        }
+    }
+}
+
+.tweets-section {
+    margin: 55px 0 45px;
+    background-color: #ffffff;
+
+    .tweets-content {
+        max-width: $max-width;
+        margin: auto;
+
+        #do-you-like {
+            font-size: 14px;
+            color: #404142;
+            text-align: center;
+        }
+        
+        #tweet-why {
+            font-size: 24px;
+            color: #8ab2c2;
+            text-align: center;
+            margin-top: -24px;
+        
+            a {
+                text-decoration: underline;
+                color: #8ab2c2;
+            }
+        }
+
+        #tweet-gallery {
+            margin: auto;
+
+            .dx-gallery-nav-button-prev {
+                background-image: url("/testcafe/images/landing-page/arrow-left-blue-tweets.png");
+                height: 321px;
+                width: 30px;
+                top: 0px;
+                margin: 0;
+            }
+            
+            .dx-gallery-nav-button-prev.dx-state-hover, .dx-gallery-nav-button-prev.dx-state-active {
+                background-image: url("/testcafe/images/landing-page/arrow-left-yellow-tweets.png");
+            }
+            
+            .dx-gallery-nav-button-next {
+                background-image: url("/testcafe/images/landing-page/arrow-right-blue-tweets.png");
+                height: 321px;
+                width: 30px;
+                top: 0px;
+                margin: 0;
+            }
+            
+            .dx-gallery-nav-button-next.dx-state-hover, .dx-gallery-nav-button-next.dx-state-active {
+                background-image: url("/testcafe/images/landing-page/arrow-right-yellow-tweets.png");
+            }
+
+            .dx-gallery-nav-button-prev:before, .dx-gallery-nav-button-next:before {
+                content: "" 
+            } 
+        }
+    }
+}
+
+.follow-section {
+    background-color: #edf1f3;
+    padding: 50px 80px 40px 0;
+    text-align: center;
+
+    .follow-content {
+        max-width: $max-width;
+        margin: auto;        
+    
+        .separator {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 56px;
+        }
+
+        .twitter {
+            background-image: url("/testcafe/images/landing-page/follow-on-twitter.png");
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position-x: right;
+            background-position-y: 22px;
+
+            display: inline-block;
+            vertical-align: top;
+            padding-right: 70px;
+            padding-top: 15px;
+            text-align: right;
+
+            .header {
+                font-size: 24px;
+                color: #8ab2c2;
+
+                a {
+                    text-decoration: underline;
+                    color: #8ab2c2;                
+                }            
+            }
+
+            .subheader {
+                font-size: 14px;
+                color: #404142;
+                margin-top: -22px;
+            }
+        }
+
+        .github {
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-image: url("/testcafe/images/landing-page/follow-on-github.png");
+            background-position-x: left;
+            background-position-y: 22px;
+
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 70px;
+            padding-top: 20px;
+            text-align: left;
+
+            font-size: 18px;
+            color: #404142;        
+
+            a {
+                text-decoration: underline;
+                color: #404142;                
+            }    
+        }
+    }
+}
+
+.site-header .site-header-content {
+    @media (max-width: 1270px) {
+        padding-left: 70px;
+        padding-right: 70px;
+        min-width: calc(#{$body-min-width} - 140px);
+    }
+}
+
+.page-object-example {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+
+.feature-5-code {
+    display: inline-block;
+
+    @media (max-width: 1490px) {
+        display: none;
+    }    
+    
+    background-color: #98c0d1;
+    color: #ffffff;
+    border: 1px solid #c8dfe8;
+    border-radius: 0;
+    padding: 7px 15px;
+}
